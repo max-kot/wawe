@@ -1,0 +1,56 @@
+html,
+body {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 171%;
+	color: $main-color;
+	background: $white-color;
+	@media (max-width: 480px) {
+		font-size: 1rem;
+	}
+}
+
+/*--- Utility ---*/
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	// делает элемент скрытым, но он по-прежнему на странице
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	display: block;
+	margin-left: -10000px;
+	background: transparent;
+	font-size: 0;
+}
+.hidden {
+	opacity: 0;
+}
+
+/*--- Grid ---*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.container {
+	max-width: $container-width + 30px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+/*--- Elements ---*/
+.no-scroll {
+	overflow: hidden;
+}

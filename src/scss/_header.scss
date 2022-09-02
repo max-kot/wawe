@@ -1,0 +1,152 @@
+.header {
+	padding: 35px 0;
+	position: absolute;
+	z-index: 55;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	@include max1000px {
+		position: fixed;
+		padding: 15px 0;
+		background: rgba(3, 46, 53, 0.4);
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		@include max1000px {
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+	}
+}
+.logo {
+	height: 65px;
+	width: 61px;
+	position: relative;
+	& + * {
+		margin-left: 185px;
+		@include max1000px {
+			margin-left: unset;
+		}
+	}
+	&__text {
+		font-family: "Raleway", sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: autolh(42, 36);
+		letter-spacing: 0.6px;
+		color: $white-color;
+		span {
+			&:first-child {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			&:last-child {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}
+.menu {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include max1000px {
+			position: absolute;
+			top: 95px;
+			right: -100%;
+			flex-direction: column;
+			width: 320px;
+			background: rgba(3, 46, 53, 0.3);
+			backdrop-filter: blur(10px);
+			align-items: center;
+			padding: 30px 10px;
+			height: 100vh;
+			overflow: auto;
+			flex-wrap: nowrap;
+			transition: all 0.3s;
+			&.active {
+				right: 0;
+			}
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 44px;
+			@include max1000px {
+				margin-right: unset;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__link {
+		font-family: "Roboto Condensed", sans-serif;
+		color: $white-color;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: autolh(28, 24);
+		padding: 0 1px 5px;
+		border-bottom: 3px solid transparent;
+		transition: all 0.3s;
+
+		&:hover {
+			border-bottom: 3px solid #00b2a0;
+			@include max1000px {
+				border-color: transparent;
+				color: #00b2a0;
+			}
+		}
+	}
+}
+
+.menu-btn {
+	display: none;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	width: 45px;
+	height: 30px;
+	position: relative;
+	padding: 0;
+
+	@include max1000px {
+		display: block;
+	}
+
+	span,
+	span::before,
+	span::after {
+		display: block;
+		background: $white-color;
+		width: 100%;
+		height: 3px;
+	}
+	span::before,
+	span::after {
+		content: "";
+	}
+	span::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	span::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}

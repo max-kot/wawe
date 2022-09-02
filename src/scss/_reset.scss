@@ -1,0 +1,61 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/*--- Common ---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul.reset,
+ol.reset,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/*--- List ---*/
+
+ul.reset {
+	list-style: none;
+}
+/*--- Images, Video ---*/
+img,
+svg,
+video,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/*--- Form ---*/
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+/*--- Links ---*/
+a[class],
+a[class]:visited {
+	text-decoration: none;
+	display: inline-block;
+}
+a[class]:hover {
+	text-decoration: none;
+}
