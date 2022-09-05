@@ -104,10 +104,10 @@
 		transition: all 0.3s;
 
 		&:hover {
-			border-bottom: 3px solid #00b2a0;
+			border-bottom: 3px solid $hover-color;
 			@include max1000px {
 				border-color: transparent;
-				color: #00b2a0;
+				color: $hover-color;
 			}
 		}
 	}

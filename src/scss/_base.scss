@@ -54,3 +54,39 @@ body {
 .no-scroll {
 	overflow: hidden;
 }
+
+.title {
+	font-family: "Raleway", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: autolh(56, 48);
+	letter-spacing: 0.6px;
+	color: $title-color;
+	text-transform: uppercase;
+	text-align: center;
+
+	@include max768px {
+		font-size: 35px;
+	}
+	@include max480px {
+		font-size: 22px;
+	}
+
+	&::after {
+		content: "/";
+		display: inline-block;
+		font-size: 72px;
+		color: $hover-color;
+		transform: translateY(30px);
+
+		@include max768px {
+			transform: translateY(20px);
+			font-size: 50px;
+		}
+		@include max480px {
+			transform: translateY(15px);
+			font-size: 46px;
+		}
+	}
+}
