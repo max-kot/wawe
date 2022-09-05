@@ -55,6 +55,12 @@
 
 	&__link-down {
 		margin-bottom: 8%;
+		transition: all 0.3s;
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+
 		@include max768px {
 			margin-bottom: 4%;
 		}
