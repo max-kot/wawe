@@ -1,0 +1,164 @@
+.services {
+	background: #f8f8f8;
+	padding: 200px 0;
+	@include max1000px {
+		padding: 100px 0;
+	}
+	@include max768px {
+		padding: 50px 0;
+	}
+	@include max480px {
+		padding: 25px 0;
+	}
+	&__body {
+	}
+
+	&__top {
+		& + * {
+			margin-top: 100px;
+			@include max1000px {
+				margin-top: 100px;
+			}
+			@include max768px {
+				margin-top: 50px;
+			}
+			@include max480px {
+				margin-top: 25px;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 100px;
+		@include max1000px {
+			margin-bottom: 100px;
+		}
+		@include max768px {
+			margin-bottom: 50px;
+		}
+		@include max480px {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		margin: -15px -35px;
+		@include max768px {
+			flex-wrap: wrap;
+			margin: -10px;
+		}
+	}
+
+	&__item {
+		flex: 0 1 33.333%;
+		padding: 15px 35px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include max768px {
+			flex: 1 1 50%;
+			padding: 10px;
+		}
+		@include max480px {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		@include max480px {
+			flex-direction: column;
+		}
+	}
+
+	&__stats-list {
+		flex: 0 1 30%;
+		@include max1000px {
+			flex: 0 1 40%;
+		}
+		@include max480px {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__stats-item {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
+.services-item {
+	&__heading {
+		display: flex;
+		align-items: center;
+		& + * {
+			margin-top: 15px;
+		}
+	}
+
+	&__icon {
+		& + * {
+			margin-left: 10px;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 117%;
+		text-transform: uppercase;
+		max-width: 146px;
+		@include max480px {
+			font-size: 18px;
+			max-width: 100%;
+		}
+	}
+
+	&__descr {
+		text-align: justify;
+	}
+
+	&__text {
+	}
+}
+
+.stats-item {
+	&__progress-bar {
+		& + * {
+			margin-top: 1px;
+		}
+	}
+
+	&__name {
+	}
+}
+.progress-bar {
+	display: flex;
+	align-items: center;
+	&__line {
+	}
+
+	&__number {
+		margin-left: 10px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 75%;
+	}
+}
+.services-bottom {
+	&__descr {
+		flex: 0 1 50%;
+		margin-top: -25px;
+		@include max480px {
+			margin-top: 25px;
+		}
+	}
+
+	&__text {
+		& + * {
+			margin-top: 30px;
+		}
+	}
+}
