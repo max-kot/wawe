@@ -26,10 +26,10 @@
 
 	&__body {
 		width: 50%;
-		padding: 200px 40px 134px 0;
+		padding: 200px 92px 134px 0;
 
 		@include max1000px {
-			padding: 100px 40px 100px 0;
+			padding: 100px 92px 100px 0;
 		}
 		@include max768px {
 			padding: 50px 0;

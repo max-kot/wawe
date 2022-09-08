@@ -65,7 +65,7 @@ body {
 	color: $title-color;
 	text-transform: uppercase;
 	text-align: center;
-
+	position: relative;
 	@include max768px {
 		font-size: 35px;
 	}
@@ -76,6 +76,7 @@ body {
 	&::after {
 		content: "/";
 		display: inline-block;
+		position: absolute;
 		font-size: 72px;
 		color: $hover-color;
 		transform: translateY(30px);
