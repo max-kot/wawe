@@ -1,10 +1,12 @@
-@import "_var.scss";
-@import "_fonts.scss";
-@import "_reset.scss";
-@import "_base.scss";
+@import "./base/_var.scss";
+@import "./base/_fonts.scss";
+@import "./base/_reset.scss";
+@import "./base/_base.scss";
 
-@import "_header.scss";
-@import "_first.scss";
-@import "_about.scss";
-@import "_services.scss";
-@import "_info.scss";
+@import "./sections/_header.scss";
+@import "./sections/_first.scss";
+@import "./sections/_about.scss";
+@import "./sections/_services.scss";
+@import "./sections/_info.scss";
+@import "./sections/_gallery.scss";
+@import "./sections/_quote.scss";
