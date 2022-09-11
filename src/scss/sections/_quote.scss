@@ -1,0 +1,37 @@
+.quote {
+	padding: 80px 0;
+	background: #f8f8f8;
+
+	@include max768px {
+		padding: 30px 0;
+	}
+
+	&__body {
+	}
+
+	&__blockquote {
+		font-style: italic;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 111%;
+		text-align: center;
+		max-width: 575px;
+		margin: 0 auto;
+		@include max768px {
+			font-size: 26px;
+		}
+	}
+
+	&__author {
+		font-style: italic;
+		font-weight: 300;
+		line-height: 129%;
+		max-width: 273px;
+		margin-left: auto;
+		margin-right: 166px;
+		text-align: center;
+		@include max768px {
+			margin-right: unset;
+		}
+	}
+}
