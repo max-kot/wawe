@@ -64,6 +64,7 @@ function watcher() {
 const build = $.gulp.series(
 	clear,
 	$.gulp.series(
+		plugins.normalizeCss,
 		plugins.jquery,
 		plugins.slick,
 		plugins.mixitup,
@@ -98,6 +99,7 @@ exports.dev = dev;
 exports.jquery = plugins.jquery;
 exports.mixitup = plugins.mixitup;
 exports.slick = plugins.slick;
+exports.normalizeCss = plugins.normalizeCss;
 
 // Default gulp
 exports.default = dev;

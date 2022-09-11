@@ -27,6 +27,13 @@ global.plugins = {
 			.pipe($.cssmin())
 			.pipe($.gulp.dest(path.dest + '/css/'))
 	},
+
+	normalizeCss() {
+		return $.gulp.src('./node_modules/normalize.css/normalize.css')
+			.pipe($.concat('normalize.min.css'))
+			.pipe($.cssmin())
+			.pipe($.gulp.dest(path.dest + '/css/'))
+	},
 }
 
 
