@@ -18,3 +18,4 @@ menuLinks.forEach(function (link) {
 	})
 })
 
+const mixer = mixitup('.gallery__grid-list')
