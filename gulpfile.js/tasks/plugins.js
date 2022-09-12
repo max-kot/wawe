@@ -28,7 +28,18 @@ global.plugins = {
 			.pipe($.gulp.dest(path.dest + '/css/'))
 	},
 
-	normalizeCss() {
+	fancybox() {
+		return $.gulp.src('./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js')
+			.pipe($.uglify())
+			.pipe($.concat('fancybox.min.js'))
+			.pipe($.gulp.dest(path.dest + '/js/'))
+			.pipe($.gulp.src('./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'))
+			.pipe($.cssmin())
+			.pipe($.concat('fancybox.min.css'))
+			.pipe($.gulp.dest(path.dest + '/css/'))
+	},
+
+	normalize() {
 		return $.gulp.src('./node_modules/normalize.css/normalize.css')
 			.pipe($.concat('normalize.min.css'))
 			.pipe($.cssmin())

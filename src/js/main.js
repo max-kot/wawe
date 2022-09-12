@@ -1,3 +1,11 @@
+$('.blog-slider').slick({
+	infinite: true,
+	dots: true,
+	arrows: false,
+	autoplay: true,
+	autoplaySpeed: 2000,
+});
+
 /*---Menu---*/
 const menuBtn = document.querySelector('.menu-btn');
 const menuList = document.querySelector('.menu__list');
@@ -19,3 +27,8 @@ menuLinks.forEach(function (link) {
 })
 
 const mixer = mixitup('.gallery__grid-list')
+
+Fancybox.bind("[data-fancybox]", {
+	// Your options go here
+});
+
