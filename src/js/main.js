@@ -19,3 +19,7 @@ menuLinks.forEach(function (link) {
 })
 
 const mixer = mixitup('.gallery__grid-list')
+
+Fancybox.bind("[data-fancybox]", {
+	// Your options go here
+});

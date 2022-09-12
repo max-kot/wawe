@@ -64,9 +64,10 @@ function watcher() {
 const build = $.gulp.series(
 	clear,
 	$.gulp.series(
-		plugins.normalizeCss,
+		plugins.normalize,
 		plugins.jquery,
 		plugins.slick,
+		plugins.fancybox,
 		plugins.mixitup,
 	),
 	$.gulp.parallel(
@@ -99,7 +100,9 @@ exports.dev = dev;
 exports.jquery = plugins.jquery;
 exports.mixitup = plugins.mixitup;
 exports.slick = plugins.slick;
-exports.normalizeCss = plugins.normalizeCss;
+exports.normalize = plugins.normalize;
+exports.fancybox = plugins.fancybox;
+
 
 // Default gulp
 exports.default = dev;
