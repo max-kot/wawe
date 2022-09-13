@@ -1123,7 +1123,7 @@ body {
 
 @media (max-width: 768px) {
   .title {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .title::after {
@@ -1291,7 +1291,7 @@ body {
   }
 
   .title {
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .title::after {

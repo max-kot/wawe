@@ -67,10 +67,10 @@ body {
 	text-align: center;
 	position: relative;
 	@include max768px {
-		font-size: 35px;
+		font-size: 40px;
 	}
 	@include max480px {
-		font-size: 22px;
+		font-size: 30px;
 	}
 
 	&::after {
