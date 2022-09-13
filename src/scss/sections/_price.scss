@@ -1,0 +1,153 @@
+.price {
+	padding: 200px 0;
+	background: #f8f8f8;
+	@include max1000px {
+		padding: 100px 0;
+	}
+	@include max768px {
+		padding: 50px 0;
+	}
+	@include max480px {
+		padding: 25px 0;
+	}
+	&__body {
+	}
+
+	&__title {
+		margin-bottom: 200px;
+		@include max1000px {
+			margin-bottom: 100px;
+		}
+		@include max768px {
+			margin-bottom: 50px;
+		}
+		@include max480px {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -5px -30px;
+		@include max1000px {
+			margin: -5px -15px;
+		}
+		@include max480px {
+			margin: -5px;
+		}
+	}
+
+	&__item {
+		padding: 15px 30px;
+
+		@include max1000px {
+			padding: 15px;
+		}
+	}
+}
+.price-item {
+	flex: 0 1 33.333%;
+	position: relative;
+	transition: all 0.3s;
+	@include max1000px {
+		flex: 0 1 50%;
+	}
+	@include max480px {
+		flex: 1 1 100%;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&__wrapper {
+		background: $white-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		padding: 45px 31px;
+		@include max1000px {
+			padding: 20px;
+		}
+		@include max480px {
+			padding: 15px;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 111%;
+		color: $title-color;
+		@include max768px {
+			font-size: 26px;
+		}
+
+		& + * {
+			margin-top: 58px;
+			@include max1000px {
+				margin-top: 45px;
+			}
+			@include max768px {
+				margin-top: 30px;
+			}
+			@include max480px {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__descr {
+		flex: 1 1 auto;
+		& + * {
+			margin-top: 61px;
+			@include max1000px {
+				margin-top: 45px;
+			}
+			@include max768px {
+				margin-top: 30px;
+			}
+			@include max480px {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		& + * {
+			margin-top: 20px;
+			@include max1000px {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__price-link {
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 111%;
+		color: $title-color;
+		@include max1000px {
+			font-size: 26px;
+		}
+
+		span {
+			font-size: 18px;
+			line-height: 122%;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}

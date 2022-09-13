@@ -1,0 +1,97 @@
+.team {
+	padding: 100px 0 200px;
+	@include max1000px {
+		padding: 100px 0;
+	}
+	@include max768px {
+		padding: 50px 0;
+	}
+	@include max480px {
+		padding: 25px 0;
+	}
+	&__body {
+	}
+
+	&__title {
+		margin-bottom: 200px;
+		@include max1000px {
+			margin-bottom: 100px;
+		}
+		@include max768px {
+			margin-bottom: 50px;
+		}
+		@include max480px {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: -5px -50px;
+		@include max1000px {
+			margin: -5px -25px;
+		}
+		@include max768px {
+			margin: -5px -15px;
+		}
+		@include max480px {
+			margin: -5px;
+		}
+	}
+
+	&__item {
+		padding: 5px 50px;
+
+		@include max1000px {
+			padding: 5px 25px;
+		}
+		@include max768px {
+			padding: 5px 15px;
+		}
+		@include max480px {
+			padding: 5px;
+		}
+	}
+}
+.team-item {
+	flex: 0 1 33.333%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	@include max768px {
+		flex: 0 1 50%;
+	}
+	@include max480px {
+		flex: 1 1 100%;
+	}
+	&__image {
+		position: relative;
+		width: 100%;
+		padding-bottom: calc(450 / 330 * 100%);
+		& + * {
+			margin-top: 25px;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 18px;
+		& + * {
+			margin-top: 5px;
+		}
+	}
+
+	&__text {
+	}
+}
