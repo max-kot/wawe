@@ -86,26 +86,7 @@
 		display: flex;
 		justify-content: center;
 	}
-	&__link {
-		display: block;
-		border: 1px solid #c4c4c4;
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 75%;
-		text-transform: uppercase;
-		color: $main-color;
-		padding: 23px;
-		min-width: 350px;
-		text-align: center;
-		transition: all 0.3s;
-		@include max480px {
-			min-width: 100%;
-		}
-
-		&:hover {
-			background: $hover-color;
-			color: $white-color;
-		}
+	&__btn {
 	}
 }
 .gallery-item {

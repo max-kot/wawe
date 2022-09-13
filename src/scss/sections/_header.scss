@@ -29,6 +29,11 @@
 	height: 65px;
 	width: 61px;
 	position: relative;
+	transition: all 0.3s;
+	&:hover {
+		transform: scale(1.1);
+	}
+
 	& + * {
 		margin-left: 185px;
 		@include max1000px {

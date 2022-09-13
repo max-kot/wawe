@@ -1,0 +1,36 @@
+.social {
+	padding-bottom: 200px;
+	@include max1000px {
+		padding-bottom: 100px;
+	}
+	@include max768px {
+		padding-bottom: 50px;
+	}
+	@include max480px {
+		padding-bottom: 25px;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		margin: 5px 0;
+		&:not(:last-child) {
+			margin-right: 9px;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 75%;
+		text-transform: uppercase;
+		transition: all 0.3s;
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}
