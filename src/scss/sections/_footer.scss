@@ -1,0 +1,19 @@
+.footer {
+	background: $hover-color;
+	padding: 70px 0;
+	@include max768px {
+		padding: 50px 0;
+	}
+	@include max480px {
+		padding: 25px 0;
+	}
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__logo {
+	}
+}
